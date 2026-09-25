@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores primárias */
+    --cor-primaria: #B84C2C;
+    --cor-primaria-escura: #8F351F;
+    --cor-secundaria: #E89B6A;
+
+    /* Cores neutras */
+    --cor-fundo: #FFF8EF;
+    --cor-superficie: #FFFFFF;
+    --cor-texto: #3D2923;
+    --cor-texto-suave: #6B554D;
+
+    /* Tipografia */
+    --fonte-principal: Arial, Helvetica, sans-serif;
+
+    --fonte-tamanho-xs: 0.75rem;
+    --fonte-tamanho-sm: 0.875rem;
+    --fonte-tamanho-md: 1rem;
+    --fonte-tamanho-lg: 1.25rem;
+    --fonte-tamanho-xl: 2rem;
+
+    /* Espaçamentos */
+    --espacamento-xs: 0.25rem;
+    --espacamento-sm: 0.5rem;
+    --espacamento-md: 1rem;
+    --espacamento-lg: 1.5rem;
+    --espacamento-xl: 2rem;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    line-height: 1.5;
+}
+
+header,
+main,
+footer {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--espacamento-lg);
+    gap: var(--espacamento-lg);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-lg);
+}
+
+.menu-links a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.menu-links a:hover {
+    color: var(--cor-primaria-escura);
+}
+
+#menu-toggle,
+.menu-hamburguer {
+    display: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--espacamento-lg);
+    padding: var(--espacamento-xl) 0;
+}
+
+main section:first-child {
+    grid-column: 1 / -1;
+}
+
+main section:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-md);
+}
+
+img,
+picture img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main section:first-child {
+        grid-column: auto;
+    }
+
+    .menu-hamburguer {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu-toggle:checked~.menu-links {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+}
+
+/* Celulares maiores */
+@media (min-width: 481px) and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main section:first-child {
+        grid-column: auto;
+    }
+
+    .menu-hamburguer {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu-toggle:checked~.menu-links {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main section:first-child {
+        grid-column: auto;
+    }
+
+    .menu-hamburguer {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu-toggle:checked~.menu-links {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+}
+
+/* Tablets maiores e notebooks */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        gap: var(--espacamento-md);
+    }
+}
+
+/* Monitores grandes */
+@media (min-width: 1440px) {
+
+    header,
+    main,
+    footer {
+        max-width: 1320px;
+    }
+
+    main {
+        gap: var(--espacamento-xl);
+    }
+}
