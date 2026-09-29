@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Contato - Casa de Patas</title>
 </head>
 
@@ -37,7 +37,7 @@
                 ou saber mais sobre a Casa de Patas? Entre em contato conosco.
             </p>
 
-            <form>
+            <form id="form-contato">
 
                 <fieldset>
                     <legend>Dados pessoais</legend>
@@ -76,7 +76,7 @@
                         <option value="RJ">Rio de Janeiro</option>
                         <option value="MG">Minas Gerais</option>
                     </select>
-                    
+
                     <label for="cep">CEP:</label>
                     <input type="text" id="cep" name="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000" required>
                 </fieldset>
@@ -93,6 +93,9 @@
     <footer>
         <p>Casa de Patas - Proteção e bem-estar animal</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../javascript/scripts.js"></script>
 
 </body>
 

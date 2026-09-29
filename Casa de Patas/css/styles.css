@@ -156,7 +156,7 @@ select:focus {
     outline: 2px solid var(--cor-secundaria);
 }
 
-input:valid,
+/* input:valid,
 textarea:valid {
     border-color: #2E7D32;
 }
@@ -164,7 +164,7 @@ textarea:valid {
 input:invalid:not(:placeholder-shown),
 textarea:invalid:not(:placeholder-shown) {
     border-color: #C62828;
-}
+} */
 
 /* Componentes de feedback */
 
@@ -199,6 +199,22 @@ textarea:invalid:not(:placeholder-shown) {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     font-weight: 700;
     z-index: 1000;
+}
+
+.campo-erro {
+    border-color: #C62828;
+}
+
+.campo-sucesso {
+    border-color: #2E7D32;
+}
+
+.mensagem-erro {
+    display: block;
+    color: #C62828;
+    font-size: var(--fonte-tamanho-sm);
+    margin-top: var(--espacamento-xs);
+    margin-bottom: var(--espacamento-sm);
 }
 
 /* Celulares pequenos */
