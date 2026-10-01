@@ -156,11 +156,6 @@ select:focus {
     outline: 2px solid var(--cor-secundaria);
 }
 
-.menu-hamburguer:focus {
-    outline: 3px solid var(--cor-secundaria);
-    outline-offset: 3px;
-}
-
 /* input:valid,
 textarea:valid {
     border-color: #2E7D32;
