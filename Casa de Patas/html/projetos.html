@@ -14,9 +14,14 @@
         <h1>Casa de Patas</h1>
         <p>Um lar temporário, uma chance para sempre.</p>
         <nav>
+            <button type="button" id="botao-contraste" class="botao-contraste" aria-pressed="false">
+                Alto contraste
+            </button>
+
             <input type="checkbox" id="menu-toggle">
 
-            <label for="menu-toggle" class="menu-hamburguer">
+            <label for="menu-toggle" class="menu-hamburguer" aria-label="Abrir ou fechar menu de navegação"
+                tabindex="0">
                 ☰
             </label>
 

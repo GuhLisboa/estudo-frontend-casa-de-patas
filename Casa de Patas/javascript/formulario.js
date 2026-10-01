@@ -27,6 +27,7 @@ export function configurarFormulario() {
         if (!aviso || !aviso.classList.contains("mensagem-erro")) {
             aviso = document.createElement("small");
             aviso.classList.add("mensagem-erro");
+            aviso.setAttribute("role", "alert");
             campo.insertAdjacentElement("afterend", aviso);
         }
 
