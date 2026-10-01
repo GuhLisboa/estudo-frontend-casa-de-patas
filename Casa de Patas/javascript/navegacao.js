@@ -1,6 +1,7 @@
 import { carregarProjetos } from "./projetos.js";
 import { configurarFormulario } from "./formulario.js";
 
+
 export function configurarNavegacao() {
     const links = document.querySelectorAll(".menu-links a");
     const main = document.querySelector("main");
