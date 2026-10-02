@@ -1,4 +1,5 @@
 import { salvarDados, recuperarDados } from "./storage.js";
+import Swal from "sweetalert2";
 
 export function configurarFormulario() {
     const formulario = document.querySelector("#form-contato");
@@ -27,7 +28,6 @@ export function configurarFormulario() {
         if (!aviso || !aviso.classList.contains("mensagem-erro")) {
             aviso = document.createElement("small");
             aviso.classList.add("mensagem-erro");
-            aviso.setAttribute("role", "alert");
             campo.insertAdjacentElement("afterend", aviso);
         }
 

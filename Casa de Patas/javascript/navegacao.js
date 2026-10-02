@@ -1,21 +1,9 @@
 import { carregarProjetos } from "./projetos.js";
 import { configurarFormulario } from "./formulario.js";
 
-
 export function configurarNavegacao() {
     const links = document.querySelectorAll(".menu-links a");
     const main = document.querySelector("main");
-    const menuHamburguer = document.querySelector(".menu-hamburguer");
-    const menuToggle = document.querySelector("#menu-toggle");
-
-    if (menuHamburguer && menuToggle) {
-        menuHamburguer.addEventListener("keydown", event => {
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                menuToggle.checked = !menuToggle.checked;
-            }
-        });
-    }
 
     async function fetchPage(url) {
         try {
