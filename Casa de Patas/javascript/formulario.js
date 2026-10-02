@@ -1,4 +1,5 @@
 import { salvarDados, recuperarDados } from "./storage.js";
+import Swal from "sweetalert2";
 
 export function configurarFormulario() {
     const formulario = document.querySelector("#form-contato");
