@@ -32,11 +32,20 @@
             <h2>Quem somos</h2>
 
             <picture>
-                <source srcset="../imagens/casa-de-patas.webp" type="image/webp">
+                <source type="image/webp" srcset="
+            ../imagens/casa-de-patas-480.webp 480w,
+            ../imagens/casa-de-patas-768.webp 768w,
+            ../imagens/casa-de-patas-1200.webp 1200w
+        " sizes="
+            (max-width: 600px) 100vw,
+            (max-width: 900px) 90vw,
+            600px
+        ">
+
                 <source srcset="../imagens/casa-de-patas.jpg" type="image/jpeg">
 
                 <img src="../imagens/casa-de-patas.png" alt="Dois gatos e um cachorro acolhidos pela Casa de Patas"
-                    width="600">
+                    width="600" loading="lazy" decoding="async">
             </picture>
 
             <p>
